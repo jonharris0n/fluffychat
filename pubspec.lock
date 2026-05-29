@@ -1079,10 +1079,11 @@ packages:
   matrix:
     dependency: "direct main"
     description:
-      name: matrix
-      sha256: "383cc4471e1bee44e2211c01e7282fbf4ccd56746211e08f5379fd9d8345fb3e"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: "krille/flag-cross-signing-keys-as-tofu-since"
+      resolved-ref: "4bd1456b3c5e9739bb9c297c9fe7aef7dc640db3"
+      url: "https://github.com/famedly/matrix-dart-sdk.git"
+    source: git
     version: "7.2.1"
   meta:
     dependency: transitive
