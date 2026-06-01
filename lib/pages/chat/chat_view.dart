@@ -358,7 +358,7 @@ class ChatView extends StatelessWidget {
                               child: Container(
                                 margin: EdgeInsets.all(bottomSheetPadding),
                                 constraints: const BoxConstraints(
-                                  maxWidth: FluffyThemes.maxTimelineWidth,
+                                  maxWidth: FluffyThemes.maxBubbleRowWidth,
                                 ),
                                 child: controller.room.isExtinct
                                     ? ElevatedButton.icon(
