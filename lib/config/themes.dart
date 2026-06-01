@@ -13,6 +13,21 @@ abstract class FluffyThemes {
 
   static const double maxTimelineWidth = columnWidth * 2;
 
+  /// Multiplier applied to the base message-bubble width. Single lever for
+  /// tuning the maximum text line length in the timeline. 1.0 == original.
+  static const double bubbleWidthScale = 1.6;
+
+  /// Maximum width of a message bubble's text content. The base (pre-scale)
+  /// inner cap was `columnWidth * 1.5`; we scale that so wide windows get
+  /// longer text lines without touching `columnWidth` (which also drives the
+  /// chat-list pane width and the column-mode breakpoints).
+  static const double maxBubbleWidth = columnWidth * 1.5 * bubbleWidthScale;
+
+  /// Maximum width of the whole timeline row (bubble plus aligned siblings:
+  /// input bar, typing indicator, seen-by row). Kept equal to [maxBubbleWidth]
+  /// so the inner content cap is the binding constraint.
+  static const double maxBubbleRowWidth = maxBubbleWidth;
+
   static const double navRailWidth = 80.0;
 
   static bool isColumnModeByWidth(double width) =>

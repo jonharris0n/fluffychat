@@ -40,7 +40,7 @@ class SeenByRow extends StatelessWidget {
           alignment: Alignment.center,
           child: AnimatedContainer(
             constraints: const BoxConstraints(
-              maxWidth: FluffyThemes.maxTimelineWidth,
+              maxWidth: FluffyThemes.maxBubbleRowWidth,
             ),
             height: seenByUsers.isEmpty ? 0 : 24,
             duration: seenByUsers.isEmpty
